@@ -13,7 +13,7 @@ conda activate openmmlab
 pip install mmcls==0.25.0 openmim scipy scikit-learn ftfy regex tqdm
 mim install mmcv-full==1.6.0
 ```
-其中第二行代码可能会报错，因此去mmcv-full官网下载whl文件，官网网址：<https://download.openmmlab.com/mmcv/dist/cu111/torch1.9.0/index.html>，下载自己电脑适应的，接着在conda中pip install一下
+其中第二行代码可能会报错，因此去mmcv-full官网下载whl文件，官网网址:<https://mmcv.readthedocs.io/zh-cn/latest/get_started/installation.html#pip>，根据pytorch和cuda版本下载自己电脑适应的mmcv版本，接着在conda中pip install一下
 安装完了mmcv-full之后跑代码依然会报错显示没有mmcv-full库，未解决
 
 剩下的跟着比赛提供的readme文档走
