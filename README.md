@@ -1,4 +1,5 @@
 # MedFM
+## week1
 首先在conda中新建一个环境
 ```Shell
 conda create --name openmmlab python=3.9 -y
@@ -19,4 +20,22 @@ mim install mmcv-full==1.6.0
 剩下的跟着比赛提供的readme文档走
 
 其中config文件的阅读见<https://mmpretrain.readthedocs.io/zh-cn/latest/get_started.html>读懂配置即明白具体原理
+
+## week2
+```
+export PYTHONPATH=$PWD:$PYTHONPATH
+```
+上述官网中代码用来将medfmc包保存到路径中从而可以使用，将$PWD改为medfmc上一层路径即可，比如改为/storage/MedFM
+
+运行train.py
+```
+python MedFM/tools/train.py MedFM/configs/vit-b16_vpt/in21k-vitb16_vpt1_bs4_lr6e-4_1-shot_chest.py
+```
+
+出现如下报错：
+TypeError: FormatCode() got an unexpected keyword argument 'verify'
+
+说明yapf包版本过高，见<https://blog.csdn.net/ZZZZ_Y_/article/details/133902230>
+
+后面的报错都是见MedFM/configs/vit-b16_vpt/in21k-vitb16_vpt1_bs4_lr6e-4_1-shot_chest.py所调用文件里面的代码，不难懂，改一下文件名就行
 
